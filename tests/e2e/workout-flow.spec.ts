@@ -48,17 +48,19 @@ test.describe.serial('complete workout journey', () => {
     expect(exportPath).toBeTruthy()
 
     await page.getByRole('button', { name: 'Alles wissen' }).click()
+    const clearReload = page.waitForEvent('load')
     await page.getByRole('button', { name: 'Alles verwijderen' }).click()
-    await page.waitForLoadState('domcontentloaded')
-    await page.goto('/settings')
+    await clearReload
+    await expect(page.getByRole('heading', { name: 'Instellingen' })).toBeVisible()
 
     await page.locator('input[type="file"]').setInputFiles(exportPath!)
     await expect(page.getByRole('heading', { name: 'Hoe wil je importeren?' })).toBeVisible()
+    const importReload = page.waitForEvent('load')
     await page.getByRole('button', { name: /Alles vervangen/ }).click()
     const importStatus = page.getByText(/Alle data is vervangen|Importeren is mislukt/)
     await expect(importStatus).toBeVisible()
     await expect(importStatus).toContainText('Alle data is vervangen')
-    await page.waitForEvent('load')
+    await importReload
     await page.goto('/')
     await expect(page.getByText('Full Body Fundamentals').first()).toBeVisible()
   })
