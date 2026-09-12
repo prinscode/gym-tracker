@@ -376,11 +376,11 @@ export function createSeedWorkouts(): Workout[] {
 
 function createSeedRecords(workouts: Workout[]): PersonalRecord[] {
   const newest = workouts[0]!
-  return newest.exercises.slice(0, 3).flatMap((exercise) => {
+  return newest.exercises.slice(0, 3).flatMap((exercise, exerciseIndex) => {
     const bestSet = [...exercise.sets].sort((a, b) => b.weightKg - a.weightKg)[0]!
     const estimated = estimatedOneRepMax(bestSet.weightKg, bestSet.reps) ?? bestSet.weightKg
     const maxWeightRecord: PersonalRecord = {
-      id: createId<'PersonalRecordId'>(),
+      id: asId<'PersonalRecordId'>(`seed-record-${exerciseIndex}-max-weight`),
       exerciseId: exercise.exerciseId,
       workoutId: newest.id,
       workoutSetId: bestSet.id,
@@ -390,7 +390,7 @@ function createSeedRecords(workouts: Workout[]): PersonalRecord[] {
       achievedAt: newest.completedAt!,
     }
     const e1rmRecord: PersonalRecord = {
-      id: createId<'PersonalRecordId'>(),
+      id: asId<'PersonalRecordId'>(`seed-record-${exerciseIndex}-estimated-1rm`),
       exerciseId: exercise.exerciseId,
       workoutId: newest.id,
       workoutSetId: bestSet.id,
