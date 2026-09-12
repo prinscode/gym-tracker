@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { Archive, Copy, Plus, Star } from 'lucide-vue-next'
+import { Archive, Copy, Plus, Star } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseBadge from '@/components/base/BaseBadge.vue'
@@ -126,7 +126,7 @@ async function activate(program: Program): Promise<void> {
 }
 .day-summary strong {
   font:
-    800 1.5rem 'Manrope',
+    800 1.5rem 'Manrope Variable',
     sans-serif;
 }
 .day-summary span {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { Dumbbell } from 'lucide-vue-next'
+import { Dumbbell } from '@lucide/vue'
 import AppNavigation from './AppNavigation.vue'
 import { useActiveWorkoutStore } from '@/stores/activeWorkoutStore'
 

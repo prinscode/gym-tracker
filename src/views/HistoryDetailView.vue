@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { format } from 'date-fns'
 import { nl } from 'date-fns/locale'
-import { ArrowLeft, Check, Clock3, Dumbbell, Pencil, Save, Trophy, X } from 'lucide-vue-next'
+import { ArrowLeft, Check, Clock3, Dumbbell, Pencil, Save, Trophy, X } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseBadge from '@/components/base/BaseBadge.vue'
@@ -309,7 +309,7 @@ async function saveHistory(): Promise<void> {
 }
 .summary-stats strong {
   font:
-    800 1.25rem 'Manrope',
+    800 1.25rem 'Manrope Variable',
     sans-serif;
 }
 .summary-stats span {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { Download, Moon, RefreshCcw, Sun, Trash2, Upload, Wifi, WifiOff } from 'lucide-vue-next'
+import { Download, Moon, RefreshCcw, Sun, Trash2, Upload, Wifi, WifiOff } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseModal from '@/components/base/BaseModal.vue'

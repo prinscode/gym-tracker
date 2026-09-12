@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { format, subDays, subMonths, subYears } from 'date-fns'
 import { nl } from 'date-fns/locale'
-import { CalendarDays, ChevronRight, Dumbbell, Search, Trophy } from 'lucide-vue-next'
+import { CalendarDays, ChevronRight, Dumbbell, Search, Trophy } from '@lucide/vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseBadge from '@/components/base/BaseBadge.vue'
 import BaseSpinner from '@/components/base/BaseSpinner.vue'

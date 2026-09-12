@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
 import { nl } from 'date-fns/locale'
-import { History } from 'lucide-vue-next'
+import { History } from '@lucide/vue'
 import type { WorkoutExercise } from '@/types/domain'
 import { useWeightUnit } from '@/composables/useWeightUnit'
 

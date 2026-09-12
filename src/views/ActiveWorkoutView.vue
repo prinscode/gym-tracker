@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import {
-  ArrowLeft,
-  CirclePlus,
-  Cloud,
-  CloudAlert,
-  CheckCircle2,
-  Dumbbell,
-  Flag,
-} from 'lucide-vue-next'
+import { ArrowLeft, CirclePlus, Cloud, CloudAlert, CheckCircle2, Dumbbell, Flag } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseSpinner from '@/components/base/BaseSpinner.vue'
 import BaseEmptyState from '@/components/base/BaseEmptyState.vue'
@@ -253,7 +245,7 @@ async function finishWorkout(): Promise<void> {
 }
 .workout-title strong {
   font:
-    700 0.95rem 'Manrope',
+    700 0.95rem 'Manrope Variable',
     sans-serif;
 }
 .duration {

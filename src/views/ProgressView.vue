@@ -16,7 +16,7 @@ import {
   type ChartOptions,
 } from 'chart.js'
 import { Bar, Line } from 'vue-chartjs'
-import { ChartNoAxesCombined, Dumbbell, Gauge, Layers3, Trophy } from 'lucide-vue-next'
+import { ChartNoAxesCombined, Dumbbell, Gauge, Layers3, Trophy } from '@lucide/vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseSpinner from '@/components/base/BaseSpinner.vue'
 import BaseEmptyState from '@/components/base/BaseEmptyState.vue'
@@ -304,7 +304,7 @@ const bestE1rm = computed(() =>
 }
 .metric-grid strong {
   font:
-    800 1.15rem 'Manrope',
+    800 1.15rem 'Manrope Variable',
     sans-serif;
 }
 .chart-grid {
