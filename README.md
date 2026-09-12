@@ -21,12 +21,21 @@ Een complete, mobile-first workout-tracker voor het plannen, uitvoeren en analys
 
 ## Screenshots
 
-> Voeg portfolioscreenshots toe in `docs/screenshots/`.
+### Dashboard
 
-- Dashboard — `docs/screenshots/dashboard.png`
-- Actieve workout — `docs/screenshots/active-workout.png`
-- Progressie — `docs/screenshots/progress.png`
-- Mobiele weergave — `docs/screenshots/mobile.png`
+![Dashboard met volgende workout, recente trainingen en persoonlijke records](docs/screenshots/dashboard.png)
+
+### Actieve workout
+
+![Actieve workout met setinvoer en voortgang](docs/screenshots/active-workout.png)
+
+### Progressie
+
+![Progressiedashboard met kracht-, volume- en belastingsgrafieken](docs/screenshots/progress.png)
+
+### Mobiele weergave
+
+![Mobiel dashboard op 360 pixels breed](docs/screenshots/mobile.png)
 
 ## Technische stack
 
@@ -79,17 +88,18 @@ Vite toont vervolgens de lokale ontwikkel-URL. De database wordt bij de eerste s
 
 ## Scripts
 
-| Script              | Doel                                      |
-| ------------------- | ----------------------------------------- |
-| `npm run dev`       | Vite developmentserver                    |
-| `npm run build`     | Typecheck plus productiebuild             |
-| `npm run preview`   | Productiebundel lokaal bekijken           |
-| `npm run typecheck` | Strikte Vue/TypeScript-controle           |
-| `npm run lint`      | ESLint zonder toegestane waarschuwingen   |
-| `npm run format`    | Prettier toepassen                        |
-| `npm run test`      | Alle unit- en componenttests              |
-| `npm run test:unit` | Vitest eenmalig uitvoeren                 |
-| `npm run test:e2e`  | Playwright op desktop en mobiel uitvoeren |
+| Script                | Doel                                       |
+| --------------------- | ------------------------------------------ |
+| `npm run dev`         | Vite developmentserver                     |
+| `npm run build`       | Typecheck plus productiebuild              |
+| `npm run preview`     | Productiebundel lokaal bekijken            |
+| `npm run typecheck`   | Strikte Vue/TypeScript-controle            |
+| `npm run lint`        | ESLint zonder toegestane waarschuwingen    |
+| `npm run format`      | Prettier toepassen                         |
+| `npm run test`        | Alle unit- en componenttests               |
+| `npm run test:unit`   | Vitest eenmalig uitvoeren                  |
+| `npm run test:e2e`    | Playwright op desktop en mobiel uitvoeren  |
+| `npm run screenshots` | Reproduceerbare portfolioscreenshots maken |
 
 ## Teststrategie
 
