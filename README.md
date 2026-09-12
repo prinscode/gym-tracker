@@ -122,6 +122,11 @@ Export levert één leesbaar JSON-bestand met `schemaVersion: 1`. Import validee
 
 ## Technical decisions
 
+De twee beslissingen die de datastrategie bepalen zijn als ADR vastgelegd:
+
+- [`ADR-001: local-first opslag met IndexedDB`](docs/decisions/001-local-first-indexeddb.md)
+- [`ADR-002: versieerbare, transactionele import en export`](docs/decisions/002-versioned-transactional-import.md)
+
 ### Waarom IndexedDB?
 
 Workoutdata is gestructureerd, groeit door de tijd en bevat geneste snapshots. IndexedDB heeft hiervoor veel meer capaciteit en betere transacties/indexen dan `localStorage`, terwijl de eerste versie volledig offline en zonder account kan werken. Dexie biedt een getypeerde, compacte laag over de browser-API.
