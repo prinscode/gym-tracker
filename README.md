@@ -21,12 +21,21 @@ Een complete, mobile-first workout-tracker voor het plannen, uitvoeren en analys
 
 ## Screenshots
 
-> Voeg portfolioscreenshots toe in `docs/screenshots/`.
+### Dashboard
 
-- Dashboard — `docs/screenshots/dashboard.png`
-- Actieve workout — `docs/screenshots/active-workout.png`
-- Progressie — `docs/screenshots/progress.png`
-- Mobiele weergave — `docs/screenshots/mobile.png`
+![Dashboard met volgende workout, recente trainingen en persoonlijke records](docs/screenshots/dashboard.png)
+
+### Actieve workout
+
+![Actieve workout met setinvoer en voortgang](docs/screenshots/active-workout.png)
+
+### Progressie
+
+![Progressiedashboard met kracht-, volume- en belastingsgrafieken](docs/screenshots/progress.png)
+
+### Mobiele weergave
+
+![Mobiel dashboard op 360 pixels breed](docs/screenshots/mobile.png)
 
 ## Technische stack
 
@@ -79,17 +88,18 @@ Vite toont vervolgens de lokale ontwikkel-URL. De database wordt bij de eerste s
 
 ## Scripts
 
-| Script              | Doel                                      |
-| ------------------- | ----------------------------------------- |
-| `npm run dev`       | Vite developmentserver                    |
-| `npm run build`     | Typecheck plus productiebuild             |
-| `npm run preview`   | Productiebundel lokaal bekijken           |
-| `npm run typecheck` | Strikte Vue/TypeScript-controle           |
-| `npm run lint`      | ESLint zonder toegestane waarschuwingen   |
-| `npm run format`    | Prettier toepassen                        |
-| `npm run test`      | Alle unit- en componenttests              |
-| `npm run test:unit` | Vitest eenmalig uitvoeren                 |
-| `npm run test:e2e`  | Playwright op desktop en mobiel uitvoeren |
+| Script                | Doel                                       |
+| --------------------- | ------------------------------------------ |
+| `npm run dev`         | Vite developmentserver                     |
+| `npm run build`       | Typecheck plus productiebuild              |
+| `npm run preview`     | Productiebundel lokaal bekijken            |
+| `npm run typecheck`   | Strikte Vue/TypeScript-controle            |
+| `npm run lint`        | ESLint zonder toegestane waarschuwingen    |
+| `npm run format`      | Prettier toepassen                         |
+| `npm run test`        | Alle unit- en componenttests               |
+| `npm run test:unit`   | Vitest eenmalig uitvoeren                  |
+| `npm run test:e2e`    | Playwright op desktop en mobiel uitvoeren  |
+| `npm run screenshots` | Reproduceerbare portfolioscreenshots maken |
 
 ## Teststrategie
 
@@ -111,6 +121,11 @@ Een actieve workout heeft `status: "active"` en wordt bij dashboard- of workoutr
 Export levert één leesbaar JSON-bestand met `schemaVersion: 1`. Import valideert elk genest veld met Zod voordat een write start. De gebruiker kiest samenvoegen of vervangen. De bestaande export wordt eerst in het geheugen gelezen en alle wijzigingen vinden binnen één Dexie-transactie plaats; bij een fout rolt IndexedDB de volledige import terug.
 
 ## Technical decisions
+
+De twee beslissingen die de datastrategie bepalen zijn als ADR vastgelegd:
+
+- [`ADR-001: local-first opslag met IndexedDB`](docs/decisions/001-local-first-indexeddb.md)
+- [`ADR-002: versieerbare, transactionele import en export`](docs/decisions/002-versioned-transactional-import.md)
 
 ### Waarom IndexedDB?
 

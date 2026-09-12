@@ -14,7 +14,8 @@
     "format:check": "prettier --check .",
     "test": "npm run test:unit",
     "test:unit": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
     "chart.js": "^4.4.9",
