@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ArrowDown, ArrowLeft, ArrowUp, GripVertical, Plus, Trash2 } from 'lucide-vue-next'
+import { ArrowDown, ArrowLeft, ArrowUp, GripVertical, Plus, Trash2 } from '@lucide/vue'
 import { z } from 'zod'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
@@ -396,7 +396,7 @@ async function submit(): Promise<void> {
   border: 0;
   border-bottom: 1px solid transparent;
   font:
-    700 1.1rem 'Manrope',
+    700 1.1rem 'Manrope Variable',
     sans-serif;
 }
 .exercise-list {

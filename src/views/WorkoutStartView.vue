@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ArrowLeft, Dumbbell, Play, RotateCcw, Trash2 } from 'lucide-vue-next'
+import { ArrowLeft, Dumbbell, Play, RotateCcw, Trash2 } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseModal from '@/components/base/BaseModal.vue'

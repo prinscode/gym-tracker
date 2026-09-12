@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  Activity,
-  CalendarDays,
-  ChartNoAxesCombined,
-  Dumbbell,
-  House,
-  Settings,
-} from 'lucide-vue-next'
+import { Activity, CalendarDays, ChartNoAxesCombined, Dumbbell, House, Settings } from '@lucide/vue'
 
 defineProps<{ mobile?: boolean }>()
 const items = [

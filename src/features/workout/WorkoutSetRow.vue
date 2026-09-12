@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Check, Copy, Trash2 } from 'lucide-vue-next'
+import { Check, Copy, Trash2 } from '@lucide/vue'
 import BaseNumberInput from '@/components/base/BaseNumberInput.vue'
 import type { WorkoutSet } from '@/types/domain'
 import { useWeightUnit } from '@/composables/useWeightUnit'

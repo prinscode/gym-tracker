@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick, ref, watch } from 'vue'
-import { X } from 'lucide-vue-next'
+import { X } from '@lucide/vue'
 
 const props = defineProps<{ open: boolean; title: string; description?: string }>()
 const emit = defineEmits<{ close: [] }>()

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BellRing, Pause, Play, Plus, SkipForward, Timer } from 'lucide-vue-next'
+import { BellRing, Pause, Play, Plus, SkipForward, Timer } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import { useRestTimer } from '@/composables/useRestTimer'
 
@@ -86,7 +86,7 @@ defineExpose({ start: rest.start, skip: rest.skip })
 }
 .rest-bar strong {
   font:
-    700 1rem 'Manrope',
+    700 1rem 'Manrope Variable',
     sans-serif;
 }
 .timer-actions {

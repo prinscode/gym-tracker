@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { differenceInMinutes, formatDistanceToNow } from 'date-fns'
 import { nl } from 'date-fns/locale'
-import { Play, Trash2 } from 'lucide-vue-next'
+import { Play, Trash2 } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import type { Workout } from '@/types/domain'
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowDown, ArrowUp, CirclePlus, Ellipsis, Play, SkipForward } from 'lucide-vue-next'
+import { ArrowDown, ArrowUp, CirclePlus, Ellipsis, Play, SkipForward } from '@lucide/vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import WorkoutSetRow from './WorkoutSetRow.vue'
 import PreviousPerformance from './PreviousPerformance.vue'
