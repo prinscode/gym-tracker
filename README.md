@@ -88,18 +88,20 @@ Vite toont vervolgens de lokale ontwikkel-URL. De database wordt bij de eerste s
 
 ## Scripts
 
-| Script                | Doel                                       |
-| --------------------- | ------------------------------------------ |
-| `npm run dev`         | Vite developmentserver                     |
-| `npm run build`       | Typecheck plus productiebuild              |
-| `npm run preview`     | Productiebundel lokaal bekijken            |
-| `npm run typecheck`   | Strikte Vue/TypeScript-controle            |
-| `npm run lint`        | ESLint zonder toegestane waarschuwingen    |
-| `npm run format`      | Prettier toepassen                         |
-| `npm run test`        | Alle unit- en componenttests               |
-| `npm run test:unit`   | Vitest eenmalig uitvoeren                  |
-| `npm run test:e2e`    | Playwright op desktop en mobiel uitvoeren  |
-| `npm run screenshots` | Reproduceerbare portfolioscreenshots maken |
+| Script                     | Doel                                        |
+| -------------------------- | ------------------------------------------- |
+| `npm run dev`              | Vite developmentserver                      |
+| `npm run build`            | Typecheck plus productiebuild               |
+| `npm run preview`          | Productiebundel lokaal bekijken             |
+| `npm run typecheck`        | Strikte Vue/TypeScript-controle             |
+| `npm run lint`             | ESLint zonder toegestane waarschuwingen     |
+| `npm run format`           | Prettier toepassen                          |
+| `npm run test`             | Alle unit- en componenttests                |
+| `npm run test:unit`        | Vitest eenmalig uitvoeren                   |
+| `npm run test:e2e`         | Playwright op desktop en mobiel uitvoeren   |
+| `npm run test:a11y`        | WCAG A/AA-smokes met axe op beide viewports |
+| `npm run test:performance` | LCP, CLS en assetbudgetten controleren      |
+| `npm run screenshots`      | Reproduceerbare portfolioscreenshots maken  |
 
 ## Teststrategie
 
@@ -109,6 +111,8 @@ Playwright voert twee end-to-endreizen uit op desktop en een mobiele viewport:
 
 1. Demo openen, workout starten, sets invullen, refreshen, herstellen, afronden en het nieuwe record/datapunt controleren.
 2. Exporteren, alle lokale data wissen en dezelfde data transactioneel terug importeren.
+
+Dezelfde browsers controleren met axe de dashboard-, geschiedenis-, progressie-, instellingen- en actieve-workoutstates op automatisch detecteerbare WCAG A/AA-overtredingen. Een aparte desktopcheck bewaakt de afgesproken ervaringsbudgetten (`LCP < 2,5 s`, `CLS ≤ 0,1`) en begrenst het aantal en de omvang van geladen scripts en styles. Deze automatisering is aanvullend op handmatige toetsenbord- en screenreadercontroles.
 
 ## Offline opslag
 
